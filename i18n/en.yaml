@@ -1,0 +1,29 @@
+- id: contact_me
+  translation: "Contact me"
+
+- id: in_lang
+  translation: "writes in english"
+
+- id: download
+  translation: "Download"
+
+- id: is_on
+  translation: "is on"
+
+- id: visit_my_blog
+  translation: "Visit my blog"
+
+- id: showing_posts_from
+  translation: "Showing posts from"
+
+- id: blog_posts
+  translation: "Blog posts"
+
+- id: last_post
+  translation: "Latest blog post"
+
+- id: written_by
+  translation: "Written By"
+
+- id: may_also_like
+  translation: "You May Also Like"

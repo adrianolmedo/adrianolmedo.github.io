@@ -1,0 +1,243 @@
+######################## default configuration ####################
+
+baseURL = "https://adrianolmedo.github.io/"
+defaultContentLanguage = "en"
+theme = "bookworm"
+
+# post pagination
+paginate = "5"
+
+# post excerpt
+summaryLength = "20"
+
+# google analytics
+# example : UA-123-45
+googleAnalytics = "" 
+
+# disqus short name
+# get your shortname form here : https://disqus.com
+disqusShortname = "adrianolmedo" 
+
+############################# Modules ##############################
+
+[module.hugoVersion]
+  extended = true
+  min = "0.80.0"
+
+#################### default parameters ################################
+
+[params]
+  description = "My personal knowledge base"
+  author = "Adrian Olmedo"
+  robots = "noidex,follow"
+
+  #logo = "images/logo.png"
+  logo_height = "35px"
+  favicon = "images/favicon.ico"
+
+  # contact form action
+  contact_form_action = "#" # contact form works with https://formspree.io
+
+  # search
+  search = true
+
+  # main section
+  mainSections = ["blog"]
+
+  # copyright
+  copyright = "Designed & Developed By [Gethugothemes](https://gethugothemes.com/)"
+
+  # Preloader
+  [params.preloader]
+    enable = false
+    preloader = "" # use jpg, png, svg or gif format.
+
+  # Instagram feed
+  [params.instafeed]
+    enable = false
+    instagram_user = "adrianolmedo"
+    access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
+
+  # Subscription
+  [params.subscription]
+    enable = false
+    # mailchimp subsciption
+    mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
+    mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
+    title = "Subscribe for our monthly newsletter."
+    input_placeholder = "Enter your email"
+
+  # cookies
+  [params.cookies]
+    enable = false
+    expire_days = 2
+
+############################ menu ##############################
+
+[[menu.main]]
+  weight = 1
+  url = "/"
+  name = "Home"
+
+[[menu.main]]
+  weight = 2
+  url = "#about"
+  name = "About"
+
+[[menu.main]]
+  weight = 3
+  url = "#portfolio"
+  name = "Portfolio"
+
+[[menu.main]]
+  weight = 4
+  url = "blog/"
+  name = "Blog"
+
+[Taxonomies]
+  tag = 'tags'
+
+[blackfriday]
+  angledQuotes = true
+  hrefTargetBlank = true
+
+############################ LANGUAGES ############################
+
+[languages]
+
+  [languages.en]
+    languageName = "English"
+    title = "Adrian Olmedo"
+    weight = 1
+
+    [languages.en.blackfriday]
+      angledQuotes = true
+
+  [languages.es]
+    languageName = "Spanish"
+    title = "Adrián Olmedo"
+    weight = 2
+
+    [languages.es.Taxonomies]
+      tags = 'tags'
+
+    [languages.es.params] # Meta data
+      description = "Mi base personal de conocimientos"
+      author = "Adrián Olmedo"
+      robots = "noidex,follow"
+
+    [[languages.es.menu.main]]
+      weight = 1
+      url = "/"
+      name = "Inicio"
+
+    [[languages.es.menu.main]]
+      weight = 2
+      url = "#about"
+      name = "Acerca"
+
+    [[languages.es.menu.main]]
+      weight = 3
+      url = "#portfolio"
+      name = "Portafolio"
+      
+    [[languages.es.menu.main]]
+      weight = 4
+      url = "blog/"
+      name = "Blog"
+
+############################# Outputs ##############################
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = 'monokai'
+    tabWidth = 4
+
+############################## Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+  link = "plugins/bootstrap/bootstrap.min.css"
+
+[[params.plugins.css]]
+  link = "plugins/line-awesome/css/line-awesome.min.css"
+
+[[params.plugins.css]]
+  link = "https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&display=swap"
+
+# JS Plugins
+[[params.plugins.js]]
+  link = "plugins/jquery/jquery.min.js"
+
+[[params.plugins.js]]
+  link = "plugins/bootstrap/bootstrap.min.js"
+
+[[params.plugins.js]]
+  link = "plugins/instagram-feed/instagram-feed.js"
+
+[[params.plugins.js]]
+  link = "plugins/search/fuse.min.js"
+
+[[params.plugins.js]]
+  link = "plugins/search/mark.js"
+
+[[params.plugins.js]]
+  link = "plugins/search/search.js"
+
+# site variables
+[params.variables]
+  font_primary = "Mulish"
+  h1 = "64px"
+  h1_lg = "52px"
+  h1_md = "42px"
+  h2 = "38px"
+  h2_md = "30px"
+  h3 = "30px"
+  h3_md = "24px"
+  h4 = "24px"
+  h5 = "18px"
+  h6 = "16px"
+  white = "#ffffff"
+  black = "#000000"
+  dark = "#152035"
+  gray = "#171717"
+  light = "#FAFAFA"
+  color_primary = "#17a2b8"
+  
+############################# Footer Menu ########################
+
+# Social Icons
+[[params.social]]
+  name = "Twitter"
+  url = "https://twitter.com/adrianolmedo"
+  icon = "lab la-twitter" # https://icons8.com/line-awesome
+
+[[params.social]]
+  name = "LinkedIn"
+  url = "https://linkedin.com/en/olmedoadrian"
+  icon = "lab la-linkedin-in"
+
+[[params.social]]
+  name = "GitHub"
+  url = "https://github.com/adrianolmedo"
+  icon = "lab la-github"
+
+[[params.social]]
+  name = "Telegram"
+  url = "https://t.me/olmedoadrian"
+  icon = "lab la-telegram"

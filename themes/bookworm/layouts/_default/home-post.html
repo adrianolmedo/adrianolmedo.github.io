@@ -1,0 +1,30 @@
+<div class="col-xs-12 col-md-6 order-md-2">
+	{{ if .Params.image }}
+    <a href="{{ .Permalink }}"><img class="w-100" src="{{ .Params.image | absURL }}" alt="{{ .Title }}"></a>
+	{{ end }}
+</div>
+
+<div class="col-xs-12 col-md-6 order-md-1">
+	<h3 class="mb-2 pt-2">
+		<a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
+	</h3>
+	<ul class="card-meta list-inline mb-2">
+		<li class="list-inline-item mb-2">
+			<span>{{ .PublishDate.Format "02 Jan, 2006" }}</span>
+		</li>
+
+		<li class="list-inline-item mb-2">
+			<ul class="post-meta-tags list-inline">
+				{{ range .Params.tags }}
+				<li class="list-inline-item">
+					<a class="border border-info" href="{{ $.Site.LanguagePrefix | absURL | replaceRE "[^/]$" "${0}/" }}tags/{{ . | urlize }}"><i class="las la-tags mr-1"></i> {{ . }}</a>
+				</li>
+				{{ end }}
+			</ul>
+		</li>
+	</ul>
+	<p>{{ .Plain | truncate 150 }}</p>
+	<div class="text-right">
+		<a class="btn btn-info" href="{{ $.Site.LanguagePrefix | absURL | replaceRE "[^/]$" "${0}/" }}blog">{{ i18n "visit_my_blog" }} <i class="las la-arrow-right"></i></a>
+	</div>
+</div>

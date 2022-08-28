@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>poo on Adrián Olmedo</title>
+    <link>https://examplesite.org/es/tags/poo/</link>
+    <description>Recent content in poo on Adrián Olmedo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 23 Jul 2021 11:35:57 +0600</lastBuildDate><atom:link href="https://examplesite.org/es/tags/poo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>¿Cómo usar GoPlantUML?</title>
+      <link>https://examplesite.org/es/blog/como-usar-goplantuml/</link>
+      <pubDate>Fri, 23 Jul 2021 11:35:57 +0600</pubDate>
+      
+      <guid>https://examplesite.org/es/blog/como-usar-goplantuml/</guid>
+      <description>goplantuml genera un código en formato PlantUML que representa un diagrama de las relaciones entre las estructuras receptoras de Go que son análogas a las clases en la OOP tradicional.</description>
+    </item>
+    
+  </channel>
+</rss>

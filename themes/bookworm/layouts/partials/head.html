@@ -1,0 +1,24 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Title }}</title>
+  <meta name="robots"  content="{{ with .Params.robots }}{{ . }}{{ else }}{{ with site.Params.robots }}{{ . }}{{ end }}{{ end }}" />
+
+  <meta name="author" content="{{ site.Params.author }}">
+  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
+
+  {{ "<!-- mobile responsive meta -->" | safeHTML }}
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+  {{ "<!-- Favicon -->" | safeHTML }}
+  <link rel="icon" href="{{ site.Params.favicon | absURL }}" type="image/x-icon">
+
+  {{ if .IsTranslated }}
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
+  {{ end }}
+
+  {{ "<!-- CSS Plugins -->" | safeHTML }}
+  {{ partialCached "style.html" . }}
+
+</head>

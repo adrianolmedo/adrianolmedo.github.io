@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Descargar vídeos de YouTube con youtube-dl</title>
+  <meta name="robots"  content="index,follow" />
+
+  <meta name="author" content="Adrián Olmedo">
+  <meta name="description" content="youtube-dl es una herramienta de línea de comandos que nos permite descargar vídeos de varias fuentes desde la terminal.">
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://examplesite.org/images/favicon.ico" type="image/x-icon">
+
+  
+  
+  <link rel="alternate" hreflang="en" href="https://examplesite.org/blog/download-videos-from-youtube-with-youtube-dl/" title="English">
+  
+  
+
+  <!-- CSS Plugins -->
+  
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&amp;display=swap">
+
+
+
+
+<link rel="stylesheet" href="https://examplesite.org/css/vendor.min.a79ee9d76f0d66f9398a4c01464d5a832e52442b3c286c40c33a572d70a0c88b2b471ad1556e3860a1a3f7316111c20f4c203fc82d0ff39660baa44470f28759.css" integrity="sha512-p57p128NZvk5ikwBRk1agy5SRCs8KGxAwzpXLXCgyIsrRxrRVW44YKGj9zFhEcIPTCA/yC0P85ZguqREcPKHWQ==" media="screen">
+
+
+</head>
+
+
+<body>
+  
+  <div class="header-height-fix"></div>
+<header class="header-nav border-bottom header-sticky-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light p-0 text-right">
+                    <a class="navbar-brand m-0" href="/es">
+                        
+                        <h4 class="font-weight-bold m-0">Adrián Olmedo</h4>
+                        <span class="badge text-muted badge-light">writes in spanish</span>
+                        
+                    </a>
+
+                    
+                    <button class="search-toggle d-inline-block d-lg-none ml-auto mr-3" data-toggle="search" aria-label="Search Toggle">
+                        <i class="las la-search"></i>
+                    </button>
+                    
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navHeader" aria-controls="navHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="d-inline lab la-buromobelexperte"></i>
+                        <i class="d-none las la-times"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navHeader">
+                        <ul class="navbar-nav mx-auto">
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            <li class="nav-item ">
+                                <a class="nav-link scroll" href="/es/" >Inicio</a>
+                            </li>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            <li class="nav-item ">
+                                <a class="nav-link scroll" href="/es/#about" >Acerca</a>
+                            </li>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            <li class="nav-item ">
+                                <a class="nav-link scroll" href="/es/#portfolio" >Portafolio</a>
+                            </li>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            <li class="nav-item ">
+                                <a class="nav-link scroll" href="/es/blog/" >Blog</a>
+                            </li>
+                            
+                            
+
+                            <li class="nav-item border-md-left">
+                                
+                                
+                                <a class="nav-link" href="https://examplesite.org/blog/download-videos-from-youtube-with-youtube-dl/">English <i class="las la-language"></i></a>
+                                
+                                
+                            </li>
+                        </ul>
+                        
+                        
+                        <div class="navbar-right d-none d-lg-inline-block">
+                            <ul class="social-links list-unstyled list-inline">
+                            <li class="list-inline-item ml-4 d-none d-lg-inline-block">
+                                <button class="search-toggle" data-toggle="search" aria-label="Search Toggle">
+                                    <i class="las la-search"></i>
+                                </button>
+                            </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="search-block">
+    <div data-toggle="search-close">
+        <i class="las la-times text-primary"></i>
+    </div>
+    <form action="/es/search">
+        <input id="search-query" name="s" type="search" placeholder="Type words &amp; hit enter" class="text-center" aria-label="search-query">
+    </form>
+</div>
+
+
+  
+  
+
+
+
+
+<section class="section-sm">
+  <div class="container">
+	<div class="row justify-content-center">
+	  <div class="col-lg-10">
+		<div class="text-center mb-5">
+		  <h3 class="h2 mb-4 post-title">Descargar vídeos de YouTube con youtube-dl</h3>
+		  <ul class="card-meta list-inline">
+			<li class="list-inline-item">
+			  <span>17 February 2021</span>
+			</li>
+		  </ul>
+		</div>
+
+		
+		<div class="mb-5 text-center">
+		  <img loading="lazy" class="img-fluid" src="https://examplesite.org/images/post/07.jpg" alt="Image not Found">
+		</div>
+		
+
+		<div class="content">
+		  <p><code>youtube-dl</code> es una herramienta de cmd que nos permite descargar vídeos de varias fuentes (no sólo de YouTube) desde la interfaz de terminal. Este tutorial lo hice con la version <code>2020.06.16.1</code>, si quieres saber qué versión estás corriendo usa <code>--version</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ youtube-dl --version
+</span></span><span style="display:flex;"><span>2020.06.16.1
+</span></span></code></pre></div><p>Antes de empezar a descargar un vídeo debes asegurarte en qué formato,
+calidad y peso lo quires, con el comando <code>youtube-dl --list-formats</code> seguido de la URL del vídeo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ youtube-dl --list-formats https://www.youtube.com/watch?v<span style="color:#f92672">=</span>SwpkPf63304
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">249</span>          webm       audio only tiny   66k , opus @ 50k <span style="color:#f92672">(</span>48000Hz<span style="color:#f92672">)</span>, 31.06MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">250</span>          webm       audio only tiny   89k , opus @ 70k <span style="color:#f92672">(</span>48000Hz<span style="color:#f92672">)</span>, 41.10MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">140</span>          m4a        audio only tiny  135k , m4a_dash container, mp4a.40.2@128k <span style="color:#f92672">(</span>44100Hz<span style="color:#f92672">)</span>, 83.58MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">251</span>          webm       audio only tiny  179k , opus @160k <span style="color:#f92672">(</span>48000Hz<span style="color:#f92672">)</span>, 83.12MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">394</span>          mp4        256x144    144p   99k , av01.0.00M.08, 25fps, video only, 50.33MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">278</span>          webm       256x144    144p  127k , webm container, vp9, 25fps, video only, 58.19MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">160</span>          mp4        256x144    144p  155k , avc1.4d400c, 25fps, video only, 63.09MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">242</span>          webm       426x240    240p  226k , vp9, 25fps, video only, 127.02MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">395</span>          mp4        426x240    240p  237k , av01.0.00M.08, 25fps, video only, 111.59MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">243</span>          webm       640x360    360p  432k , vp9, 25fps, video only, 230.93MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">133</span>          mp4        426x240    240p  456k , avc1.4d4015, 25fps, video only, 147.51MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">396</span>          mp4        640x360    360p  483k , av01.0.01M.08, 25fps, video only, 206.01MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">244</span>          webm       854x480    480p  771k , vp9, 25fps, video only, 391.84MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">397</span>          mp4        854x480    480p  821k , av01.0.04M.08, 25fps, video only, 365.63MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">134</span>          mp4        640x360    360p  995k , avc1.4d401e, 25fps, video only, 288.22MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">398</span>          mp4        1280x720   720p 1529k , av01.0.05M.08, 25fps, video only, 730.90MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">247</span>          webm       1280x720   720p 1539k , vp9, 25fps, video only, 733.20MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">135</span>          mp4        854x480    480p 1638k , avc1.4d401e, 25fps, video only, 423.79MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">399</span>          mp4        1920x1080  1080p 2658k , av01.0.08M.08, 25fps, video only, 1.26GiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">248</span>          webm       1920x1080  1080p 2693k , vp9, 25fps, video only, 1.53GiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">136</span>          mp4        1280x720   720p 3117k , avc1.4d401f, 25fps, video only, 734.95MiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">137</span>          mp4        1920x1080  1080p 5577k , avc1.640028, 25fps, video only, 2.37GiB
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">18</span>           mp4        640x360    360p  724k , avc1.42001E, 25fps, mp4a.40.2@ 96k <span style="color:#f92672">(</span>44100Hz<span style="color:#f92672">)</span>, 467.68MiB <span style="color:#f92672">(</span>best<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>En la primera columna aparece un número de referencia, ese será nuestra opción a elegir, por ejemplo el <code>18</code> que es el último de esa lista:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ youtube-dl -f <span style="color:#ae81ff">18</span> https://www.youtube.com/watch?v<span style="color:#f92672">=</span>SwpkPf63304
+</span></span></code></pre></div><h4 id="obtener-sólo-audio-mp3">Obtener sólo audio (mp3)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ youtube-dl -x --audio-format mp3 https://www.youtube.com/watch?v<span style="color:#f92672">=</span>SwpkPf63304
+</span></span></code></pre></div><hr>
+<p><strong>References</strong></p>
+<p><a href="https://www.tecmint.com/download-mp3-song-from-youtube-videos/">https://www.tecmint.com/download-mp3-song-from-youtube-videos/</a></p>
+<p><a href="https://blog.desdelinux.net/youtube-dl-tips-que-no-sabias/">https://blog.desdelinux.net/youtube-dl-tips-que-no-sabias/</a></p>
+<p><a href="http://www.webupd8.org/2014/02/video-downloader-youtube-dl-gets.html">http://www.webupd8.org/2014/02/video-downloader-youtube-dl-gets.html</a></p>
+
+		</div>
+	  </div>
+	</div>
+
+	<div class="single-post-meta">
+		<div class="row justify-content-center">
+			<div class="col-lg-5 col-md-6 text-center text-md-left">
+				<ul class="post-meta-tags list-unstyled list-inline">
+					
+					<li class="list-inline-item"><a class="border border-info" href="https://examplesite.org/es/tags/youtube"><i class="las la-tags mr-1"></i> youtube</a></li>
+					
+					<li class="list-inline-item"><a class="border border-info" href="https://examplesite.org/es/tags/youtube-dl"><i class="las la-tags mr-1"></i> youtube-dl</a></li>
+					
+				</ul>
+			</div>
+			<div class="col-lg-5 col-md-6 text-center text-md-right mt-4 mt-md-0">
+<ul class="social-links has-bg-color list-unstyled list-inline" style="line-height:0">
+  <li class="list-inline-item">
+    
+    <a class="resp-sharing-button__link d-block" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fexamplesite.org%2fes%2fblog%2fdescargar-videos-de-youtube-con-youtube-dl%2f" target="_blank"
+      rel="noopener" aria-label="">
+      <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          <i class="lab la-facebook-f text-dark"></i>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li class="list-inline-item">
+    
+    <a class="resp-sharing-button__link d-block" href="https://twitter.com/intent/tweet/?text=Descargar%20v%c3%addeos%20de%20YouTube%20con%20youtube-dl&amp;url=https%3a%2f%2fexamplesite.org%2fes%2fblog%2fdescargar-videos-de-youtube-con-youtube-dl%2f"
+      target="_blank" rel="noopener" aria-label="">
+      <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          <i class="lab la-twitter text-dark"></i>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li class="list-inline-item">
+    
+    <a class="resp-sharing-button__link d-block" href="mailto:?subject=Descargar%20v%c3%addeos%20de%20YouTube%20con%20youtube-dl&amp;body=https%3a%2f%2fexamplesite.org%2fes%2fblog%2fdescargar-videos-de-youtube-con-youtube-dl%2f" target="_self"
+      rel="noopener" aria-label="">
+      <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          <i class="las la-envelope text-dark"></i>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li class="list-inline-item">
+    
+    <a class="resp-sharing-button__link d-block" href="whatsapp://send?text=Descargar%20v%c3%addeos%20de%20YouTube%20con%20youtube-dl%20https%3a%2f%2fexamplesite.org%2fes%2fblog%2fdescargar-videos-de-youtube-con-youtube-dl%2f" target="_blank"
+      rel="noopener" aria-label="">
+      <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          <i class="lab la-whatsapp text-dark"></i>
+        </div>
+      </div>
+    </a>
+  </li>
+
+</ul></div>
+		</div>
+	</div>
+
+	<div class="single-post-author">
+	  <div class="row justify-content-center">
+		<div class="col-lg-10">
+		  <div class="media d-block d-sm-flex text-center text-sm-left">
+			
+			<a href="https://examplesite.org/es/author/adrian-olmedo/"><img loading="lazy" class="img-fluid rounded-circle mr-0 mr-sm-4 mb-4" src="https://examplesite.org/images/author/author-2.jpg" alt="Adrián Olmedo"></a>
+			<div class="media-body">
+			  <p class="font-primary mb-1">Escrito por</p>
+			  <h4 class="text-dark font-weight-700">Adrián Olmedo</h4>
+			  <p class="font-primary">Un apasionado desarrollador backend.</p>
+			  <ul class="social-links list-unstyled list-inline ml-0 ml-sm-n2">
+				
+				<li class="list-inline-item">
+                  <a href="https://twitter.com/adrianolmedo" target="_blank">
+					<i class="lab la-twitter"></i>
+				  </a>
+                </li>
+				
+				<li class="list-inline-item">
+                  <a href="https://github.com/adrianolmedo" target="_blank">
+					<i class="lab la-github"></i>
+				  </a>
+                </li>
+				
+				<li class="list-inline-item">
+                  <a href="https://www.linkedin.com/es/olmedoadrian" target="_blank">
+					<i class="lab la-linkedin-in"></i>
+				  </a>
+                </li>
+				
+				<li class="list-inline-item">
+                  <a href="https://t.me/olmedoadrian" target="_blank">
+					<i class="lab la-telegram"></i>
+				  </a>
+                </li>
+				
+			  </ul>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="single-post-similer">
+	  <div class="row justify-content-center">
+		<div class="col-lg-10">
+		  <div class="row mt-3">
+			<div class="col-12">
+			  <h3 class="text-dark font-weight-800 mb-4 pb-2">También podría interesarle</h3>
+			</div>
+			
+			  
+			<div class="col-md-6">
+			  <article class="card post-card">
+  
+  <a href="https://examplesite.org/es/blog/como-usar-goplantuml/">
+    <img loading="lazy" class="w-100" src="https://examplesite.org/images/post/06.jpg" alt="¿Cómo usar GoPlantUML?">
+  </a>
+  
+  <div class="card-body">
+    <ul class="card-meta list-inline mb-2">
+      <li class="list-inline-item mb-2">
+        <span>23 Jul, 2021</span>
+      </li>
+      <li class="list-inline-item mb-2">
+        <ul class="post-meta-tags list-inline">
+          
+          <li class="list-inline-item"><a class="border border-info" href="https://examplesite.org/es/tags/uml"><i class="las la-tags mr-1"></i> uml</a></li>
+          
+          <li class="list-inline-item"><a class="border border-info" href="https://examplesite.org/es/tags/poo"><i class="las la-tags mr-1"></i> poo</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+    <h3 class="mb-3">
+      <a class="post-title" href="https://examplesite.org/es/blog/como-usar-goplantuml/">¿Cómo usar GoPlantUML?</a>
+    </h3>
+    <p>goplantuml genera un código en formato PlantUML que representa un diagrama de las relaciones entre las estructuras receptoras de Go que son análogas a …</p>
+
+    
+  </div>
+</article>
+			</div>
+			
+			<div class="col-md-6">
+			  <article class="card post-card">
+  
+  <a href="https://examplesite.org/es/blog/polucion-de-interfaces/">
+    <img loading="lazy" class="w-100" src="https://examplesite.org/images/post/03.jpg" alt="Polución de interfaces">
+  </a>
+  
+  <div class="card-body">
+    <ul class="card-meta list-inline mb-2">
+      <li class="list-inline-item mb-2">
+        <span>15 Jul, 2021</span>
+      </li>
+      <li class="list-inline-item mb-2">
+        <ul class="post-meta-tags list-inline">
+          
+          <li class="list-inline-item"><a class="border border-info" href="https://examplesite.org/es/tags/translated"><i class="las la-tags mr-1"></i> translated</a></li>
+          
+          <li class="list-inline-item"><a class="border border-info" href="https://examplesite.org/es/tags/advices"><i class="las la-tags mr-1"></i> advices</a></li>
+          
+          <li class="list-inline-item"><a class="border border-info" href="https://examplesite.org/es/tags/oop"><i class="las la-tags mr-1"></i> oop</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+    <h3 class="mb-3">
+      <a class="post-title" href="https://examplesite.org/es/blog/polucion-de-interfaces/">Polución de interfaces</a>
+    </h3>
+    <p> Below is a full Spanish translation of an William Kennedy&#39;s post in Ardan labs Blog: Avoid Interface Pollution.
+  Introducción Las interfaces solo …</p>
+
+    
+  </div>
+</article>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+
+
+
+  <footer class="section-sm">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-5">
+        
+        
+        
+      </div>
+      <div class="col-lg-12 text-center mt-5">
+
+        <ul class="list-unstyled list-inline mb-3">
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content">
+                    Adrián Olmedo está en
+                </p>
+            </li>
+        </ul>
+
+        <ul class="social-links icon-box list-unstyled list-inline mb-4">
+            
+            <li class="list-inline-item text-center">
+                <a href="https://twitter.com/adrianolmedo" aria-label="social-icon" title="Twitter" target="_blank">
+                    <i class="lab lab la-twitter"></i>
+                </a>
+            </li>
+            
+            <li class="list-inline-item text-center">
+                <a href="https://linkedin.com/en/olmedoadrian" aria-label="social-icon" title="LinkedIn" target="_blank">
+                    <i class="lab lab la-linkedin-in"></i>
+                </a>
+            </li>
+            
+            <li class="list-inline-item text-center">
+                <a href="https://github.com/adrianolmedo" aria-label="social-icon" title="GitHub" target="_blank">
+                    <i class="lab lab la-github"></i>
+                </a>
+            </li>
+            
+            <li class="list-inline-item text-center">
+                <a href="https://t.me/olmedoadrian" aria-label="social-icon" title="Telegram" target="_blank">
+                    <i class="lab lab la-telegram"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <ul class="list-unstyled list-inline mb-3">
+            
+            
+            
+            
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="/es/">Inicio</a></p>
+            </li>
+            
+            
+            
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="/es/#about">Acerca</a></p>
+            </li>
+            
+            
+            
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="/es/#portfolio">Portafolio</a></p>
+            </li>
+            
+            
+            
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="/es/blog/">Blog</a></p>
+            </li>
+            
+        </ul>
+
+        <ul class="list-unstyled list-inline mb-3">
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="https://examplesite.org/">English</a></p>
+            </li>
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="https://examplesite.org/es/">Spanish</a></p>
+            </li>
+            
+        </ul>
+
+        
+        <p class="mb-0 copyright-text">Designed &amp; Developed By <a href="https://gethugothemes.com/">Gethugothemes</a></p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+<script data-turbolinks-suppress-warning src="/js/vendor.min.7691f56c1a8f6454203de7b89e9e08a7b1ee29fe0771ce833a299d6459cbd3a16db6ea28bdfed969f060ba261ba2a37efe9c439cddab8dc1a392d3beb6550606.js" integrity="sha512-dpH1bBqPZFQgPee4np4Ip7HuKf4Hcc6DOimdZFnL06Fttuoovf7ZafBguiYboqN&#43;/pxDnN2rjcGjktO&#43;tlUGBg=="></script>
+
+
+
+</body>
+
+</html>
