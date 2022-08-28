@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Author on Adrian Olmedo</title>
+    <link>https://adrianolmedo.github.io/author/</link>
+    <description>Recent content in Author on Adrian Olmedo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Jan 2021 10:13:00 +0600</lastBuildDate><atom:link href="https://adrianolmedo.github.io/author/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adrian Olmedo</title>
+      <link>https://adrianolmedo.github.io/author/adrian-olmedo/</link>
+      <pubDate>Tue, 02 Feb 2021 10:20:19 +0600</pubDate>
+      
+      <guid>https://adrianolmedo.github.io/author/adrian-olmedo/</guid>
+      <description>I&amp;rsquo; am passionate backend developer.</description>
+    </item>
+    
+  </channel>
+</rss>

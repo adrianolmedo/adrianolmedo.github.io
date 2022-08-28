@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Adrian Olmedo</title>
+    <link>https://adrianolmedo.github.io/tags/</link>
+    <description>Recent content in Tags on Adrian Olmedo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 23 Jul 2021 11:35:57 +0600</lastBuildDate><atom:link href="https://adrianolmedo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>oop</title>
+      <link>https://adrianolmedo.github.io/tags/oop/</link>
+      <pubDate>Fri, 23 Jul 2021 11:35:57 +0600</pubDate>
+      
+      <guid>https://adrianolmedo.github.io/tags/oop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uml</title>
+      <link>https://adrianolmedo.github.io/tags/uml/</link>
+      <pubDate>Fri, 23 Jul 2021 11:35:57 +0600</pubDate>
+      
+      <guid>https://adrianolmedo.github.io/tags/uml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ffmpeg</title>
+      <link>https://adrianolmedo.github.io/tags/ffmpeg/</link>
+      <pubDate>Tue, 13 Apr 2021 15:33:57 +0600</pubDate>
+      
+      <guid>https://adrianolmedo.github.io/tags/ffmpeg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>youtube</title>
+      <link>https://adrianolmedo.github.io/tags/youtube/</link>
+      <pubDate>Wed, 17 Feb 2021 18:19:25 +0600</pubDate>
+      
+      <guid>https://adrianolmedo.github.io/tags/youtube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>youtube-dl</title>
+      <link>https://adrianolmedo.github.io/tags/youtube-dl/</link>
+      <pubDate>Wed, 17 Feb 2021 18:19:25 +0600</pubDate>
+      
+      <guid>https://adrianolmedo.github.io/tags/youtube-dl/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

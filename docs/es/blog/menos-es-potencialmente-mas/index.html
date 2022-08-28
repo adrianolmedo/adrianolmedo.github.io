@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Menos es potencialmente más</title>
+  <meta name="robots"  content="index,follow" />
+
+  <meta name="author" content="Adrián Olmedo">
+  <meta name="description" content="Aquí está el texto de la charla que di en la reunión de Go SF en junio de 2012. Esta es una charla personal. No hablo por nadie más en el equipo de Go aquí, aunque quiero reconocer desde el principio que el equipo es lo que hizo y sigue haciendo que Go suceda.">
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://adrianolmedo.github.io/images/favicon.ico" type="image/x-icon">
+
+  
+
+  <!-- CSS Plugins -->
+  
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&amp;display=swap">
+
+
+
+
+<link rel="stylesheet" href="https://adrianolmedo.github.io/css/vendor.min.a79ee9d76f0d66f9398a4c01464d5a832e52442b3c286c40c33a572d70a0c88b2b471ad1556e3860a1a3f7316111c20f4c203fc82d0ff39660baa44470f28759.css" integrity="sha512-p57p128NZvk5ikwBRk1agy5SRCs8KGxAwzpXLXCgyIsrRxrRVW44YKGj9zFhEcIPTCA/yC0P85ZguqREcPKHWQ==" media="screen">
+
+
+</head>
+
+
+<body>
+  
+  <div class="header-height-fix"></div>
+<header class="header-nav border-bottom header-sticky-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light p-0 text-right">
+                    <a class="navbar-brand m-0" href="/es">
+                        
+                        <h4 class="font-weight-bold m-0">Adrián Olmedo</h4>
+                        <span class="badge text-muted badge-light">writes in spanish</span>
+                        
+                    </a>
+
+                    
+                    <button class="search-toggle d-inline-block d-lg-none ml-auto mr-3" data-toggle="search" aria-label="Search Toggle">
+                        <i class="las la-search"></i>
+                    </button>
+                    
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navHeader" aria-controls="navHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="d-inline lab la-buromobelexperte"></i>
+                        <i class="d-none las la-times"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navHeader">
+                        <ul class="navbar-nav mx-auto">
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            <li class="nav-item ">
+                                <a class="nav-link scroll" href="/es/" >Inicio</a>
+                            </li>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            <li class="nav-item ">
+                                <a class="nav-link scroll" href="/es/#about" >Acerca</a>
+                            </li>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            <li class="nav-item ">
+                                <a class="nav-link scroll" href="/es/#portfolio" >Portafolio</a>
+                            </li>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            
+                            <li class="nav-item ">
+                                <a class="nav-link scroll" href="/es/blog/" >Blog</a>
+                            </li>
+                            
+                            
+
+                            <li class="nav-item border-md-left">
+                                
+                                
+                                
+                                <a class="nav-link" href="https://adrianolmedo.github.io/">English <i class="las la-language"></i></a>
+                                
+                                
+                                
+                                
+                                
+                            </li>
+                        </ul>
+                        
+                        
+                        <div class="navbar-right d-none d-lg-inline-block">
+                            <ul class="social-links list-unstyled list-inline">
+                            <li class="list-inline-item ml-4 d-none d-lg-inline-block">
+                                <button class="search-toggle" data-toggle="search" aria-label="Search Toggle">
+                                    <i class="las la-search"></i>
+                                </button>
+                            </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="search-block">
+    <div data-toggle="search-close">
+        <i class="las la-times text-primary"></i>
+    </div>
+    <form action="/es/search">
+        <input id="search-query" name="s" type="search" placeholder="Type words &amp; hit enter" class="text-center" aria-label="search-query">
+    </form>
+</div>
+
+
+  
+  
+
+
+
+
+<section class="section-sm">
+  <div class="container">
+	<div class="row justify-content-center">
+	  <div class="col-lg-10">
+		<div class="text-center mb-5">
+		  <h3 class="h2 mb-4 post-title">Menos es potencialmente más</h3>
+		  <ul class="card-meta list-inline">
+			<li class="list-inline-item">
+			  <span>15 July 2021</span>
+			</li>
+		  </ul>
+		</div>
+
+		
+		<div class="mb-5 text-center">
+		  <img loading="lazy" class="img-fluid" src="https://adrianolmedo.github.io/images/post/05.jpg" alt="Image not Found">
+		</div>
+		
+
+		<div class="content">
+		  
+
+<div class="notices note" ><p>Below is a full Spanish translation of Rob Pike's original post on his personal Blogger: <a href="https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html">Less is exponentially more</a>.</p></div>
+
+<hr>
+<p>Aquí está el texto de la charla que di en la reunión de Go SF en junio de 2012.</p>
+<p>Esta es una charla personal. No hablo por nadie más en el equipo de Go aquí, aunque quiero reconocer desde el principio que el equipo es lo que hizo y sigue haciendo que Go suceda. También me gustaría agradecer a los organizadores de Go SF por darme la oportunidad de hablar con ustedes.</p>
+<p>Hace unas semanas me preguntaron: &ldquo;¿Cuál fue la mayor sorpresa que encontraste al implementar Go?&rdquo; Supe la respuesta al instante: aunque esperábamos que los programadores de C++ vieran Go como una alternativa, en cambio, la mayoría de los programadores de Go provienen de lenguajes como Python y Ruby. Muy pocos proceden de C++.</p>
+<p>Nosotros, —Ken, Robert y yo—, éramos programadores de C++ cuando diseñamos un nuevo lenguaje para resolver los problemas que creíamos que debían resolverse para el tipo de software que escribimos. Parece casi paradójico que a otros programadores de C++ no les importe.</p>
+<p>Me gustaría hablar hoy sobre lo que nos impulsó a crear Go y por qué el resultado no debería habernos sorprendido así. Prometo que esto será más sobre Go que sobre C++, y que si no conoces C++ podrás seguirlo.</p>
+<p>La respuesta se puede resumir así: ¿Crees que menos es más o menos es menos?</p>
+<p>Aquí hay una metáfora, en forma de historia real. A Bell Labs centers le asignaron originalmente números de tres letras: 111 para Investigación en Física, 127 para Investigación en Ciencias de la Computación, y así sucesivamente. A principios de la década de 1980, apareció un memorando anunciando que a medida que nuestra comprensión de la investigación había aumentado, se había hecho necesario agregar otro dígito para poder caracterizar mejor nuestro trabajo. Así que nuestro centro se convirtió en 1127. Ron Hardin bromeó, medio en serio, que si realmente entendiéramos nuestro mundo mejor, podríamos bajar un dígito y pasar de 127 a solo 27. Por supuesto, la gerencia no entendió la broma, ni tampoco la esperaba, pero creo que hay sabiduría en ello. Menos puede ser más. Cuanto mejor entiendas, más conciso podrás ser.</p>
+<p>Tenga esa idea en mente.</p>
+<p>Alrededor de septiembre de 2007, estaba haciendo un trabajo menor pero central en un enorme programa de Google C++, uno con el que todos habéis interactuado, y mis compilaciones tardaban unos 45 minutos en nuestro enorme grupo de compilación distribuido. Se anunció que iba a haber una charla presentada por un par de empleados de Google que forman parte del comité de estándares de C++. Nos iban a decir lo que vendría en C++ 0x, como se llamaba en ese momento. (Ahora se conoce como C++ 11).</p>
+<p>En el lapso de una hora en esa charla, escuchamos acerca de unas 35 funciones nuevas que se estaban planificando. De hecho hubo muchos más, pero solo 35 fueron descritos en la charla. Algunas de las características eran menores, por supuesto, pero las de la charla eran al menos lo suficientemente significativas como para llamar la atención. Algunas eran muy sutiles y difíciles de entender, como las referencias de <code>rvalue</code>, mientras que otras son especialmente similares a C++, como las <em>variadic templates</em>, y otras son simplemente locas, como literales definidos por el usuario.</p>
+<p>En este punto me hice una pregunta: ¿El comité de C++ realmente creía que lo malo de C++ era que no tenía suficientes funciones? Seguramente, en una variante del chiste de Ron Hardin, sería un mayor logro simplificar el lenguaje en lugar de agregarle más. Por supuesto, eso es ridículo, pero tenga en cuenta la idea.</p>
+<p>Solo unos meses antes de esa charla de C++, yo mismo había dado una charla, que puedes ver en YouTube, sobre un lenguaje concurrente de juguete que había construido en la década de 1980. Ese lenguaje se llamó Newsqueak y por supuesto es un precursor de Go.</p>
+<p>Di esa charla porque había ideas en Newsqueak que extrañaba en mi trabajo en Google y había estado pensando en ellas nuevamente. Estaba convencido de que facilitarían la escritura del código del servidor y Google realmente podría beneficiarse de eso.</p>
+<p>De hecho, intenté y no pude encontrar una manera de llevar las ideas a C++. Era demasiado difícil acoplar las operaciones concurrentes con las estructuras de control de C++ y, a su vez, eso dificultaba ver las ventajas reales. Además, C++ hizo que todo pareciera demasiado engorroso, aunque admito que nunca fui realmente fácil en el lenguaje. Entonces abandoné la idea.</p>
+<p>Pero la charla de C++ 0x me hizo pensar de nuevo. Una cosa que realmente me molestó, y creo que Ken y Robert también, fue el nuevo modelo de memoria C++ con tipos atómicos. Simplemente se sentía mal poner un conjunto de detalles tan definidos microscópicamente en un sistema de tipos que ya estaba sobrecargado. También parecía miope, ya que es probable que el hardware cambie significativamente en la próxima década y no sería prudente acoplar demasiado el lenguaje al hardware actual.</p>
+<p>Regresamos a nuestras oficinas después de la charla. Comencé otra compilación, giré mi silla para mirar a Robert y comencé a hacer preguntas directas. Antes de que terminara la compilación, atamos a Ken y decidimos hacer algo. No queríamos escribir en C++ para siempre, y nosotros, —especialmente yo—, queríamos tener la simultaneidad al alcance de mi mano al escribir código de Google. También queríamos abordar el problema de la &ldquo;programación en grande&rdquo; de frente, del que hablaremos más adelante.</p>
+<p>Escribimos en la pizarra un montón de cosas que queríamos, desiderata si se quiere. Pensamos en grande, ignorando la sintaxis y la semántica detalladas y centrándonos en el panorama general.</p>
+<p>Todavía tengo un hilo de correo fascinante de esa semana. Aquí hay un par de extractos:</p>
+<p>Robert:</p>
+<blockquote>
+<p>Punto de partida: C, corregir algunos defectos obvios, eliminar la suciedad, agregar algunas características que faltan.</p>
+</blockquote>
+<p>Rob:</p>
+<blockquote>
+<p>nombre: &lsquo;go&rsquo;. puedes inventar razones para este nombre, pero tiene buenas propiedades. es breve y fácil de escribir. tools: goc, gol, goa. si hay un depurador / intérprete interactivo, podría simplemente llamarse &lsquo;go&rsquo;. el sufijo es .go.</p>
+</blockquote>
+<p>Robert:</p>
+<blockquote>
+<p>Interfaces vacías: interface{}. Estos son implementados por todas las interfaces y, por lo tanto, esto podría reemplazar a void*.</p>
+</blockquote>
+<p>No lo resolvimos todo de inmediato. Por ejemplo, nos llevó más de un año descubrir arrays y slices. Pero una gran parte del sabor del lenguaje surgió en esos primeros días.</p>
+<p>Observe que Robert dijo que C era el punto de partida, no C++. No estoy seguro, pero creo que se refería a C propiamente dicho, especialmente porque Ken estaba allí. Pero también es cierto que, al final, en realidad no partimos de C. Creamos desde cero, tomando prestadas solo cosas menores como operadores y corchetes y algunas palabras clave comunes. (Y, por supuesto, también tomamos prestadas ideas de otros lenguajes que conocíamos). En cualquier caso, ahora veo que reaccionamos a C++ volviendo a lo básico, descomponiéndolo todo y comenzando de nuevo. No estábamos tratando de diseñar un C++ mejor, ni siquiera un C mejor. Se trataba de un lenguaje mejor en general para el tipo de software que nos importaba.</p>
+<p>Al final, por supuesto, resultó bastante diferente de C o C++. Más diferente incluso de lo que muchos creen. Hice una lista de simplificaciones significativas en Go sobre C y C++:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- sintaxis regular (no se necesita una tabla de símbolos para analizar)</td>
+</tr>
+<tr>
+<td>- recolección de basura (solo)</td>
+</tr>
+<tr>
+<td>- sin archivos de encabezado</td>
+</tr>
+<tr>
+<td>- dependencias explícitas</td>
+</tr>
+<tr>
+<td>- sin dependencias circulares</td>
+</tr>
+<tr>
+<td>- las constantes son solo números</td>
+</tr>
+<tr>
+<td>- int e int32 son tipos distintos</td>
+</tr>
+<tr>
+<td>- case letters establece visibilidad</td>
+</tr>
+<tr>
+<td>- métodos para cualquier tipo (sin clases)</td>
+</tr>
+<tr>
+<td>- sin herencia de subtipos (sin subclases)</td>
+</tr>
+<tr>
+<td>- init a nivel de paquete y orden de init bien definido</td>
+</tr>
+<tr>
+<td>- archivos compilados juntos en un paquete</td>
+</tr>
+<tr>
+<td>- globales a nivel de paquete presentados en cualquier orden</td>
+</tr>
+<tr>
+<td>- sin conversiones aritméticas (las constantes ayudan)</td>
+</tr>
+<tr>
+<td>- las interfaces son implícitas (sin declaración de &ldquo;implements&rdquo;)</td>
+</tr>
+<tr>
+<td>- incrustación (sin promoción a superclase)</td>
+</tr>
+<tr>
+<td>- los métodos se declaran como funciones (sin ubicación especial)</td>
+</tr>
+<tr>
+<td>- los métodos son solo funciones</td>
+</tr>
+<tr>
+<td>- las interfaces son solo métodos (sin datos)</td>
+</tr>
+<tr>
+<td>- los métodos coinciden solo por nombre (no por tipo)</td>
+</tr>
+<tr>
+<td>- sin constructores ni destructores</td>
+</tr>
+<tr>
+<td>- el poscremento y el posdecremento son declaraciones, no expresiones</td>
+</tr>
+<tr>
+<td>- sin preincremento o predecremento</td>
+</tr>
+<tr>
+<td>- la asignación no es una expresión</td>
+</tr>
+<tr>
+<td>- orden de evaluación definido en la asignación, llamada de función (sin &ldquo;punto de secuencia&rdquo;)</td>
+</tr>
+<tr>
+<td>- sin aritmética de puntero</td>
+</tr>
+<tr>
+<td>- la memoria siempre está a cero</td>
+</tr>
+<tr>
+<td>- legal para tomar la dirección de la variable local</td>
+</tr>
+<tr>
+<td>- no &ldquo;this&rdquo; en los métodos</td>
+</tr>
+<tr>
+<td>- pilas segmentadas</td>
+</tr>
+<tr>
+<td>- sin const u otro tipo de anotaciones</td>
+</tr>
+<tr>
+<td>- sin plantillas</td>
+</tr>
+<tr>
+<td>- sin excepciones</td>
+</tr>
+<tr>
+<td>- builtin string, slice, map</td>
+</tr>
+<tr>
+<td>- comprobación de límites en arrays</td>
+</tr>
+</tbody>
+</table>
+<p>Y, sin embargo, con esa larga lista de simplificaciones y piezas faltantes, Go es, creo, más expresivo que C o C++. Menos puede ser más.</p>
+<p>Pero no puedes sacarlo todo. Necesita componentes básicos como una idea sobre cómo se comportan los tipos, una sintaxis que funcione bien en la práctica y algo inefable que haga que las bibliotecas interoperen bien.</p>
+<p>Una cosa que está notoriamente ausente es, por supuesto, una jerarquía de tipos. Permítame ser grosero con eso por un minuto.</p>
+<p>Al principio del lanzamiento de Go, alguien me dijo que no podía imaginarse trabajando en un idioma sin tipos genéricos. Como he informado en otra parte, me pareció un comentario extraño.</p>
+<p>Para ser justos, probablemente estaba diciendo a su manera que realmente le gustaba lo que STL hace por él en C++. Sin embargo, para el propósito de la discusión, consideremos su afirmación al pie de la letra.</p>
+<p>Lo que dice es que para él escribir contenedores como listas de entradas y mapas de cadenas es una carga insoportable. Encuentro que es una afirmación extraña. Paso muy poco de mi tiempo de programación luchando con esos problemas, incluso en lenguajes sin tipos genéricos.</p>
+<p>Pero lo que es más importante, lo que dice es que los tipos son la forma de aliviar esa carga. Tipos. No funciones polimórficas o primitivas del lenguaje o ayudantes de otro tipo, sino tipos.</p>
+<p>Ese es el detalle que me queda grabado.</p>
+<p>Los programadores que vienen a Go desde C++ y Java pierden la idea de programar con tipos, particularmente herencia y subclases y todo eso. Quizás soy un filisteo con los tipos, pero nunca he encontrado ese modelo particularmente expresivo.</p>
+<p>Mi difunto amigo Alain Fournier me dijo una vez que consideraba que la taxonomía es la forma más baja de trabajo académico. ¿Y sabes qué? Las jerarquías de tipos son solo taxonomía. Debe decidir qué pieza va en qué caja, el padre de cada tipo, si A hereda de B o B de A. ¿Es una matriz ordenable una matriz que ordena o un clasificador representado por una matriz? Si cree que los tipos abordan todos los problemas de diseño, debe tomar esa decisión.</p>
+<p>Creo que es una forma absurda de pensar en la programación. Lo que importa no son las relaciones ancestrales entre las cosas, sino lo que pueden hacer por ti.</p>
+<p>Eso, por supuesto, es donde entran las interfaces en Go. Pero son parte de un panorama más amplio, la verdadera filosofía de Go.</p>
+<p>Si C++ y Java se tratan de jerarquías de tipos y la taxonomía de tipos, Go se trata de composición.</p>
+<p>Doug McIlroy, el eventual inventor de las Unix pipes, escribió en 1964 (!):</p>
+<blockquote>
+<p>Deberíamos tener algunas formas de acoplar programas como la manguera de jardín: atornille en otro segmento cuando sea necesario masajear los datos de otra manera. Esta es también la forma de IO.</p>
+</blockquote>
+<p>Ese es el camino de Go también. Go toma esa idea y la lleva muy lejos. Es un lenguaje de composición y acoplamiento.</p>
+<p>El ejemplo obvio es la forma en que las interfaces nos dan la composición de los componentes. No importa qué es esa cosa, si implementa el método M, puedo dejarlo aquí.</p>
+<p>Otro ejemplo importante es cómo la concurrencia nos da la composición de cálculos que se ejecutan de forma independiente.</p>
+<p>E incluso hay una forma inusual (y muy simple) de composición tipográfica: incrustación.</p>
+<p>Estas técnicas de composición son las que le dan a Go su sabor, que es profundamente diferente del sabor de los programas C++ o Java.</p>
+<hr>
+<p>Hay un aspecto no relacionado del diseño de Go que me gustaría mencionar: Go fue diseñado para ayudar a escribir grandes programas, escritos y mantenidos por grandes equipos.</p>
+<p>Existe esta idea sobre &ldquo;programar en grande&rdquo; y de alguna manera C++ y Java poseen ese dominio. Creo que es solo un accidente histórico, o quizás un accidente industrial. Pero la creencia generalizada es que tiene algo que ver con el diseño orientado a objetos.</p>
+<p>No me lo creo en absoluto. El gran software necesita metodología para estar seguro, pero no tanto como necesita una sólida gestión de dependencias y una abstracción de interfaz limpia y excelentes herramientas de documentación, ninguna de las cuales funciona bien con C++ (aunque Java lo hace notablemente mejor).</p>
+<p>No lo sabemos todavía, porque no se ha escrito suficiente software en Go, pero estoy seguro de que Go resultará ser un excelente lenguaje para la programación en general. El tiempo dirá.</p>
+<hr>
+<p>Ahora, para volver a la sorprendente pregunta que abrió mi charla:</p>
+<p>¿Por qué Go, un lenguaje diseñado desde cero para lo que se usa C++, no atrae a más programadores de C++?</p>
+<p>Bromas aparte, creo que es porque Go y C++ son filosóficamente profundamente diferentes.</p>
+<p>C++ consiste en tenerlo todo al alcance de la mano. Encontré esta cita en una pregunta frecuente de C++ 11:</p>
+<blockquote>
+<p>La gama de abstracciones que C++ puede expresar de forma elegante, flexible y sin costes en comparación con el código especializado elaborado a mano ha aumentado considerablemente.</p>
+</blockquote>
+<p>Esa forma de pensar no es la forma en que funciona Go. El costo cero no es un objetivo, al menos no el costo de CPU cero. La afirmación de Go es que minimizar el esfuerzo del programador es una consideración más importante.</p>
+<p>Go no lo abarca todo. No tiene todo integrado. No tiene un control preciso de cada matiz de ejecución. Por ejemplo, no tienes RAII. En su lugar, obtienes un recolector de basura. Ni siquiera obtienes una función para liberar memoria.</p>
+<p>Lo que se le proporciona es un conjunto de bloques de construcción poderosos pero fáciles de entender y de usar a partir de los cuales puede ensamblar, componer, una solución a su problema. Puede que no termine tan rápido o tan sofisticado o tan ideológicamente motivado como la solución que escribiría en algunos de esos otros idiomas, pero es casi seguro que será más fácil de escribir, más fácil de leer, más fácil de entender, más fácil de escribir. mantener, y tal vez más seguro.</p>
+<p>Para decirlo de otra manera, simplificando demasiado, por supuesto:</p>
+<p>Los programadores de Python y Ruby vienen a Go porque no tienen que renunciar a mucha expresividad, sino que obtienen rendimiento y se ponen a jugar con la concurrencia.</p>
+<p>Los programadores de C++ no vienen a Go porque hayan luchado duro para obtener un control exquisito de su dominio de programación y no quieren ceder nada de eso. Para ellos, el software no se trata solo de hacer el trabajo, se trata de hacerlo de cierta manera.</p>
+<p>El problema, entonces, es que el éxito de Go contradeciría su visión del mundo.</p>
+<p>Y deberíamos habernos dado cuenta de eso desde el principio. A las personas que están entusiasmadas con las nuevas características de C++ 11 no les va a importar un lenguaje que tenga mucho menos. Incluso si, al final, ofrece mucho más.</p>
+<p>Gracias.</p>
+<hr>
+<p><strong>References</strong></p>
+<p>P. Rob. (Jun 25, 2012). Less is exponentially more. <em>command center</em>. <a href="https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html">https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html</a></p>
+
+		</div>
+	  </div>
+	</div>
+
+	<div class="single-post-meta">
+		<div class="row justify-content-center">
+			<div class="col-lg-5 col-md-6 text-center text-md-left">
+				<ul class="post-meta-tags list-unstyled list-inline">
+					
+					<li class="list-inline-item"><a class="border border-info" href="https://adrianolmedo.github.io/es/tags/translated"><i class="las la-tags mr-1"></i> translated</a></li>
+					
+					<li class="list-inline-item"><a class="border border-info" href="https://adrianolmedo.github.io/es/tags/advices"><i class="las la-tags mr-1"></i> advices</a></li>
+					
+					<li class="list-inline-item"><a class="border border-info" href="https://adrianolmedo.github.io/es/tags/oop"><i class="las la-tags mr-1"></i> oop</a></li>
+					
+				</ul>
+			</div>
+			<div class="col-lg-5 col-md-6 text-center text-md-right mt-4 mt-md-0">
+<ul class="social-links has-bg-color list-unstyled list-inline" style="line-height:0">
+  <li class="list-inline-item">
+    
+    <a class="resp-sharing-button__link d-block" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fadrianolmedo.github.io%2fes%2fblog%2fmenos-es-potencialmente-mas%2f" target="_blank"
+      rel="noopener" aria-label="">
+      <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          <i class="lab la-facebook-f text-dark"></i>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li class="list-inline-item">
+    
+    <a class="resp-sharing-button__link d-block" href="https://twitter.com/intent/tweet/?text=Menos%20es%20potencialmente%20m%c3%a1s&amp;url=https%3a%2f%2fadrianolmedo.github.io%2fes%2fblog%2fmenos-es-potencialmente-mas%2f"
+      target="_blank" rel="noopener" aria-label="">
+      <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          <i class="lab la-twitter text-dark"></i>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li class="list-inline-item">
+    
+    <a class="resp-sharing-button__link d-block" href="mailto:?subject=Menos%20es%20potencialmente%20m%c3%a1s&amp;body=https%3a%2f%2fadrianolmedo.github.io%2fes%2fblog%2fmenos-es-potencialmente-mas%2f" target="_self"
+      rel="noopener" aria-label="">
+      <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          <i class="las la-envelope text-dark"></i>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li class="list-inline-item">
+    
+    <a class="resp-sharing-button__link d-block" href="whatsapp://send?text=Menos%20es%20potencialmente%20m%c3%a1s%20https%3a%2f%2fadrianolmedo.github.io%2fes%2fblog%2fmenos-es-potencialmente-mas%2f" target="_blank"
+      rel="noopener" aria-label="">
+      <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          <i class="lab la-whatsapp text-dark"></i>
+        </div>
+      </div>
+    </a>
+  </li>
+
+</ul></div>
+		</div>
+	</div>
+
+	<div class="single-post-author">
+	  <div class="row justify-content-center">
+		<div class="col-lg-10">
+		  <div class="media d-block d-sm-flex text-center text-sm-left">
+			
+			<a href="https://adrianolmedo.github.io/es/author/adrian-olmedo/"><img loading="lazy" class="img-fluid rounded-circle mr-0 mr-sm-4 mb-4" src="https://adrianolmedo.github.io/images/author/author-2.jpg" alt="Adrián Olmedo"></a>
+			<div class="media-body">
+			  <p class="font-primary mb-1">Escrito por</p>
+			  <h4 class="text-dark font-weight-700">Adrián Olmedo</h4>
+			  <p class="font-primary">Un apasionado desarrollador backend.</p>
+			  <ul class="social-links list-unstyled list-inline ml-0 ml-sm-n2">
+				
+				<li class="list-inline-item">
+                  <a href="https://twitter.com/adrianolmedo" target="_blank">
+					<i class="lab la-twitter"></i>
+				  </a>
+                </li>
+				
+				<li class="list-inline-item">
+                  <a href="https://github.com/adrianolmedo" target="_blank">
+					<i class="lab la-github"></i>
+				  </a>
+                </li>
+				
+				<li class="list-inline-item">
+                  <a href="https://www.linkedin.com/es/olmedoadrian" target="_blank">
+					<i class="lab la-linkedin-in"></i>
+				  </a>
+                </li>
+				
+				<li class="list-inline-item">
+                  <a href="https://t.me/olmedoadrian" target="_blank">
+					<i class="lab la-telegram"></i>
+				  </a>
+                </li>
+				
+			  </ul>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="single-post-similer">
+	  <div class="row justify-content-center">
+		<div class="col-lg-10">
+		  <div class="row mt-3">
+			<div class="col-12">
+			  <h3 class="text-dark font-weight-800 mb-4 pb-2">También podría interesarle</h3>
+			</div>
+			
+			  
+			<div class="col-md-6">
+			  <article class="card post-card">
+  
+  <a href="https://adrianolmedo.github.io/es/blog/como-usar-goplantuml/">
+    <img loading="lazy" class="w-100" src="https://adrianolmedo.github.io/images/post/06.jpg" alt="¿Cómo usar GoPlantUML?">
+  </a>
+  
+  <div class="card-body">
+    <ul class="card-meta list-inline mb-2">
+      <li class="list-inline-item mb-2">
+        <span>23 Jul, 2021</span>
+      </li>
+      <li class="list-inline-item mb-2">
+        <ul class="post-meta-tags list-inline">
+          
+          <li class="list-inline-item"><a class="border border-info" href="https://adrianolmedo.github.io/es/tags/uml"><i class="las la-tags mr-1"></i> uml</a></li>
+          
+          <li class="list-inline-item"><a class="border border-info" href="https://adrianolmedo.github.io/es/tags/poo"><i class="las la-tags mr-1"></i> poo</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+    <h3 class="mb-3">
+      <a class="post-title" href="https://adrianolmedo.github.io/es/blog/como-usar-goplantuml/">¿Cómo usar GoPlantUML?</a>
+    </h3>
+    <p>goplantuml genera un código en formato PlantUML que representa un diagrama de las relaciones entre las estructuras receptoras de Go que son análogas a …</p>
+
+    
+  </div>
+</article>
+			</div>
+			
+			<div class="col-md-6">
+			  <article class="card post-card">
+  
+  <a href="https://adrianolmedo.github.io/es/blog/polucion-de-interfaces/">
+    <img loading="lazy" class="w-100" src="https://adrianolmedo.github.io/images/post/03.jpg" alt="Polución de interfaces">
+  </a>
+  
+  <div class="card-body">
+    <ul class="card-meta list-inline mb-2">
+      <li class="list-inline-item mb-2">
+        <span>15 Jul, 2021</span>
+      </li>
+      <li class="list-inline-item mb-2">
+        <ul class="post-meta-tags list-inline">
+          
+          <li class="list-inline-item"><a class="border border-info" href="https://adrianolmedo.github.io/es/tags/translated"><i class="las la-tags mr-1"></i> translated</a></li>
+          
+          <li class="list-inline-item"><a class="border border-info" href="https://adrianolmedo.github.io/es/tags/advices"><i class="las la-tags mr-1"></i> advices</a></li>
+          
+          <li class="list-inline-item"><a class="border border-info" href="https://adrianolmedo.github.io/es/tags/oop"><i class="las la-tags mr-1"></i> oop</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+    <h3 class="mb-3">
+      <a class="post-title" href="https://adrianolmedo.github.io/es/blog/polucion-de-interfaces/">Polución de interfaces</a>
+    </h3>
+    <p> Below is a full Spanish translation of an William Kennedy&#39;s post in Ardan labs Blog: Avoid Interface Pollution.
+  Introducción Las interfaces solo …</p>
+
+    
+  </div>
+</article>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+
+
+
+  <footer class="section-sm">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-5">
+        
+        
+        
+      </div>
+      <div class="col-lg-12 text-center mt-5">
+
+        <ul class="list-unstyled list-inline mb-3">
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content">
+                    Adrián Olmedo está en
+                </p>
+            </li>
+        </ul>
+
+        <ul class="social-links icon-box list-unstyled list-inline mb-4">
+            
+            <li class="list-inline-item text-center">
+                <a href="https://twitter.com/adrianolmedo" aria-label="social-icon" title="Twitter" target="_blank">
+                    <i class="lab lab la-twitter"></i>
+                </a>
+            </li>
+            
+            <li class="list-inline-item text-center">
+                <a href="https://linkedin.com/en/olmedoadrian" aria-label="social-icon" title="LinkedIn" target="_blank">
+                    <i class="lab lab la-linkedin-in"></i>
+                </a>
+            </li>
+            
+            <li class="list-inline-item text-center">
+                <a href="https://github.com/adrianolmedo" aria-label="social-icon" title="GitHub" target="_blank">
+                    <i class="lab lab la-github"></i>
+                </a>
+            </li>
+            
+            <li class="list-inline-item text-center">
+                <a href="https://t.me/olmedoadrian" aria-label="social-icon" title="Telegram" target="_blank">
+                    <i class="lab lab la-telegram"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+        <ul class="list-unstyled list-inline mb-3">
+            
+            
+            
+            
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="/es/">Inicio</a></p>
+            </li>
+            
+            
+            
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="/es/#about">Acerca</a></p>
+            </li>
+            
+            
+            
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="/es/#portfolio">Portafolio</a></p>
+            </li>
+            
+            
+            
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="/es/blog/">Blog</a></p>
+            </li>
+            
+        </ul>
+
+        <ul class="list-unstyled list-inline mb-3">
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="https://adrianolmedo.github.io/">English</a></p>
+            </li>
+            
+            <li class="list-inline-item text-center">
+                <p class="mb-0 footer-text content"><a href="https://adrianolmedo.github.io/es/">Spanish</a></p>
+            </li>
+            
+        </ul>
+
+        
+        <p class="mb-0 copyright-text">Designed &amp; Developed By <a href="https://gethugothemes.com/">Gethugothemes</a></p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+<script data-turbolinks-suppress-warning src="/js/vendor.min.7691f56c1a8f6454203de7b89e9e08a7b1ee29fe0771ce833a299d6459cbd3a16db6ea28bdfed969f060ba261ba2a37efe9c439cddab8dc1a392d3beb6550606.js" integrity="sha512-dpH1bBqPZFQgPee4np4Ip7HuKf4Hcc6DOimdZFnL06Fttuoovf7ZafBguiYboqN&#43;/pxDnN2rjcGjktO&#43;tlUGBg=="></script>
+
+
+
+</body>
+
+</html>
