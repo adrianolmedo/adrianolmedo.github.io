@@ -12,7 +12,7 @@ social:
   link: "https://github.com/adrianolmedo"
 
 - icon: "la-linkedin-in"
-  link: "https://www.linkedin.com/es/olmedoadrian"
+  link: "https://www.linkedin.com/in/olmedoadrian"
 
 - icon: "la-telegram"
   link: "https://t.me/olmedoadrian"

@@ -16,7 +16,7 @@ social:
     icon: "lab la-twitter"
     name: "Twitter"
     
-  - link: "https://www.linkedin.com/in/olmedoadrian"
+  - link: "https://www.linkedin.com/in/olmedoadrian/?locale=en_US"
     icon: "lab la-linkedin-in"
     name: "LinkedIn"
     

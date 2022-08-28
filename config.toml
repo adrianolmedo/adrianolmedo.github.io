@@ -229,7 +229,7 @@ disqusShortname = "adrianolmedo"
 
 [[params.social]]
   name = "LinkedIn"
-  url = "https://linkedin.com/en/olmedoadrian"
+  url = "https://www.linkedin.com/in/olmedoadrian/?locale=en_US"
   icon = "lab la-linkedin-in"
 
 [[params.social]]
