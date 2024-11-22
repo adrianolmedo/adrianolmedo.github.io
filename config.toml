@@ -5,7 +5,8 @@ defaultContentLanguage = "en"
 theme = "bookworm"
 
 # post pagination
-paginate = "5"
+[pagination]
+  pagerSize = 5
 
 # post excerpt
 summaryLength = "20"
