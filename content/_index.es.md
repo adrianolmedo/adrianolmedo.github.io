@@ -6,7 +6,7 @@ draft: false
 # resume
 resume:
   enable: true
-  link: https://drive.google.com/file/d/1bqdelZ1c9IU_2Mo_igpTy3mSxxmYOpFG/view?usp=sharing
+  link: https://drive.google.com/file/d/1bqdelZ1c9IU_2Mo_igpTy3mSxxmYOpFG/view?usp=drive_link
 
 # social
 social:
