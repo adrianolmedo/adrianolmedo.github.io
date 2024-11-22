@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>youtube-dl on Adrian Olmedo</title>
+    <title>Youtube-Dl on Adrian Olmedo</title>
     <link>https://adrianolmedo.github.io/tags/youtube-dl/</link>
-    <description>Recent content in youtube-dl on Adrian Olmedo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Feb 2021 18:19:25 +0600</lastBuildDate><atom:link href="https://adrianolmedo.github.io/tags/youtube-dl/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Youtube-Dl on Adrian Olmedo</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 17 Feb 2021 18:19:25 +0600</lastBuildDate>
+    <atom:link href="https://adrianolmedo.github.io/tags/youtube-dl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Download videos from YouTube with youtube-dl</title>
       <link>https://adrianolmedo.github.io/blog/download-videos-from-youtube-with-youtube-dl/</link>
       <pubDate>Wed, 17 Feb 2021 18:19:25 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/blog/download-videos-from-youtube-with-youtube-dl/</guid>
-      <description>youtube-dl is a cli-tool that allows us download videos from various sources (not only from YouTube) from the terminal interface. I wrote this tutorial using the version 2020.</description>
+      <description>&lt;p&gt;&lt;code&gt;youtube-dl&lt;/code&gt; is a cli-tool that allows us download videos from various sources (not only from YouTube) from the terminal interface. I wrote this tutorial using the version &lt;code&gt;2020.06.16.1&lt;/code&gt;, if you want to know what version you are running use &lt;code&gt;--version&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ youtube-dl --version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2020.06.16.1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Before starting to download a video you must make sure in what format,&#xA;quality and weight you want, with the command &lt;code&gt;youtube-dl --list-formats&lt;/code&gt; followed by the video URL:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

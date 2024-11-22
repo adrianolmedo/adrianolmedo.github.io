@@ -4,53 +4,44 @@
     <title>Blog de Adrián Olmedo on Adrián Olmedo</title>
     <link>https://adrianolmedo.github.io/es/blog/</link>
     <description>Recent content in Blog de Adrián Olmedo on Adrián Olmedo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 23 Jul 2021 11:35:57 +0600</lastBuildDate><atom:link href="https://adrianolmedo.github.io/es/blog/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 23 Jul 2021 11:35:57 +0600</lastBuildDate>
+    <atom:link href="https://adrianolmedo.github.io/es/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>¿Cómo usar GoPlantUML?</title>
       <link>https://adrianolmedo.github.io/es/blog/como-usar-goplantuml/</link>
       <pubDate>Fri, 23 Jul 2021 11:35:57 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/blog/como-usar-goplantuml/</guid>
-      <description>goplantuml genera un código en formato PlantUML que representa un diagrama de las relaciones entre las estructuras receptoras de Go que son análogas a las clases en la OOP tradicional.</description>
+      <description>&lt;p&gt;&lt;code&gt;goplantuml&lt;/code&gt; genera un código en formato PlantUML que representa un diagrama de las relaciones entre las estructuras receptoras de Go que son análogas a las clases en la OOP tradicional.&lt;/p&gt;&#xA;&lt;p&gt;Una herramienta útil al comienzo del diseño y planificación de un proyecto complejo en Go si deseas de manera gráfica observar cúales entidades están pisando interfaces, seguir visualmente inyecciones de dependencia o identificar patrones.&lt;/p&gt;&#xA;&lt;h4 id=&#34;si-tu-proyecto-es-plano-sin-paquetes&#34;&gt;Si tu proyecto es plano sin paquetes&lt;/h4&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ goplantuml -aggregate-private-members -show-compositions -show-implementations -show-aggregations . &amp;gt; diagram.puml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;si-tu-proyecto-tiene-paquetes&#34;&gt;Si tu proyecto tiene paquetes&lt;/h4&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ goplantuml -aggregate-private-members -show-compositions -show-implementations -show-aggregations ./ &amp;gt; diagram.puml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Polución de interfaces</title>
       <link>https://adrianolmedo.github.io/es/blog/polucion-de-interfaces/</link>
       <pubDate>Thu, 15 Jul 2021 16:56:47 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/blog/polucion-de-interfaces/</guid>
-      <description>Below is a full Spanish translation of an William Kennedy&#39;s post in Ardan labs Blog: Avoid Interface Pollution.
-  Introducción Las interfaces solo deben utilizarse cuando su valor añadido sea claro.</description>
+      <description>&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Below is a full Spanish translation of an William Kennedy&#39;s post in Ardan labs Blog: &lt;a href=&#34;https://www.ardanlabs.com/blog/2016/10/avoid-interface-pollution.html&#34;&gt;Avoid Interface Pollution&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&#xA;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;introducción&#34;&gt;Introducción&lt;/h4&gt;&#xA;&lt;p&gt;Las interfaces solo deben utilizarse cuando su valor añadido sea claro. Veo demasiados paquetes que declaran interfaces innecesariamente, a veces solo por usar interfaces. El uso de interfaces cuando no son necesarias se denomina contaminación de interfaces. Esta es una práctica que me gustaría ver cuestionada e identificada más en las revisiones de código.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Menos es potencialmente más</title>
       <link>https://adrianolmedo.github.io/es/blog/menos-es-potencialmente-mas/</link>
       <pubDate>Thu, 15 Jul 2021 12:09:51 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/blog/menos-es-potencialmente-mas/</guid>
-      <description>Below is a full Spanish translation of Rob Pike&#39;s original post on his personal Blogger: Less is exponentially more.</description>
+      <description>&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Below is a full Spanish translation of Rob Pike&#39;s original post on his personal Blogger: &lt;a href=&#34;https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html&#34;&gt;Less is exponentially more&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&#xA;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Aquí está el texto de la charla que di en la reunión de Go SF en junio de 2012.&lt;/p&gt;&#xA;&lt;p&gt;Esta es una charla personal. No hablo por nadie más en el equipo de Go aquí, aunque quiero reconocer desde el principio que el equipo es lo que hizo y sigue haciendo que Go suceda. También me gustaría agradecer a los organizadores de Go SF por darme la oportunidad de hablar con ustedes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Grabar vídeo pantalla con FFmpeg</title>
       <link>https://adrianolmedo.github.io/es/blog/grabar-video-pantalla-con-ffmpeg/</link>
       <pubDate>Tue, 13 Apr 2021 15:33:57 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/blog/grabar-video-pantalla-con-ffmpeg/</guid>
-      <description>ffmpeg es una herramienta que además de permitir la conversion de formato de archivos multimedia también puedes grabar vídeo pantalla partiendo desde la interfaz de terminal.</description>
+      <description>&lt;p&gt;&lt;code&gt;ffmpeg&lt;/code&gt; es una herramienta que además de permitir la conversion de formato de archivos multimedia también puedes grabar vídeo pantalla partiendo desde la interfaz de terminal.&lt;/p&gt;&#xA;&lt;p&gt;Este tutorial lo hice con la version &lt;code&gt;n4.1.4&lt;/code&gt;, si quieres saber qué versión estás corriendo usa el flag &lt;code&gt;-version&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ffmpeg -version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg version n4.1.4 Copyright &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;c&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; 2000-2019 the FFmpeg developers&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;built with gcc &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Ubuntu 7.4.0-1ubuntu1~18.04.1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;configuration: --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/usr --disable-debug --disable-doc --disable-static --enable-avisynth --enable-cuda --enable-cuvid --enable-libdrm --enable-ffplay --enable-gnutls --enable-gpl --enable-libass --enable-libfdk-aac --enable-libfontconfig --enable-libfreetype --enable-libmp3lame --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libopus --enable-libpulse --enable-sdl2 --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libv4l2 --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxvid --enable-nonfree --enable-nvenc --enable-omx --enable-openal --enable-opencl --enable-runtime-cpudetect --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-xlib&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;libavutil      56. 22.100 / 56. 22.100&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;libavcodec     58. 35.100 / 58. 35.100&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;libavformat    58. 20.100 / 58. 20.100&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;libavdevice    58.  5.100 / 58.  5.100&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;libavfilter     7. 40.101 /  7. 40.101&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;libswscale      5.  3.100 /  5.  3.100&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;libswresample   3.  3.100 /  3.  3.100&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;libpostproc    55.  3.100 / 55.  3.100&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;grabar-sólo-vídeo&#34;&gt;Grabar sólo vídeo&lt;/h4&gt;&#xA;&lt;p&gt;Bota un archivo &lt;code&gt;.mp4&lt;/code&gt; ideal para reproductores genéricos:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Descargar vídeos de YouTube con youtube-dl</title>
       <link>https://adrianolmedo.github.io/es/blog/descargar-videos-de-youtube-con-youtube-dl/</link>
       <pubDate>Wed, 17 Feb 2021 18:19:25 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/blog/descargar-videos-de-youtube-con-youtube-dl/</guid>
-      <description>youtube-dl es una herramienta de cmd que nos permite descargar vídeos de varias fuentes (no sólo de YouTube) desde la interfaz de terminal.</description>
+      <description>&lt;p&gt;&lt;code&gt;youtube-dl&lt;/code&gt; es una herramienta de cmd que nos permite descargar vídeos de varias fuentes (no sólo de YouTube) desde la interfaz de terminal. Este tutorial lo hice con la version &lt;code&gt;2020.06.16.1&lt;/code&gt;, si quieres saber qué versión estás corriendo usa &lt;code&gt;--version&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ youtube-dl --version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2020.06.16.1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Antes de empezar a descargar un vídeo debes asegurarte en qué formato,&#xA;calidad y peso lo quires, con el comando &lt;code&gt;youtube-dl --list-formats&lt;/code&gt; seguido de la URL del vídeo:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

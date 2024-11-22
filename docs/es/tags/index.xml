@@ -4,79 +4,65 @@
     <title>Tags on Adrián Olmedo</title>
     <link>https://adrianolmedo.github.io/es/tags/</link>
     <description>Recent content in Tags on Adrián Olmedo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 23 Jul 2021 11:35:57 +0600</lastBuildDate><atom:link href="https://adrianolmedo.github.io/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 23 Jul 2021 11:35:57 +0600</lastBuildDate>
+    <atom:link href="https://adrianolmedo.github.io/es/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>poo</title>
+      <title>Poo</title>
       <link>https://adrianolmedo.github.io/es/tags/poo/</link>
       <pubDate>Fri, 23 Jul 2021 11:35:57 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/tags/poo/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>uml</title>
+      <title>Uml</title>
       <link>https://adrianolmedo.github.io/es/tags/uml/</link>
       <pubDate>Fri, 23 Jul 2021 11:35:57 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/tags/uml/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>advices</title>
+      <title>Advices</title>
       <link>https://adrianolmedo.github.io/es/tags/advices/</link>
       <pubDate>Thu, 15 Jul 2021 16:56:47 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/tags/advices/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>oop</title>
+      <title>Oop</title>
       <link>https://adrianolmedo.github.io/es/tags/oop/</link>
       <pubDate>Thu, 15 Jul 2021 16:56:47 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/tags/oop/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>translated</title>
+      <title>Translated</title>
       <link>https://adrianolmedo.github.io/es/tags/translated/</link>
       <pubDate>Thu, 15 Jul 2021 16:56:47 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/tags/translated/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ffmpeg</title>
+      <title>Ffmpeg</title>
       <link>https://adrianolmedo.github.io/es/tags/ffmpeg/</link>
       <pubDate>Tue, 13 Apr 2021 15:33:57 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/tags/ffmpeg/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>youtube</title>
+      <title>Youtube</title>
       <link>https://adrianolmedo.github.io/es/tags/youtube/</link>
       <pubDate>Wed, 17 Feb 2021 18:19:25 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/tags/youtube/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>youtube-dl</title>
+      <title>Youtube-Dl</title>
       <link>https://adrianolmedo.github.io/es/tags/youtube-dl/</link>
       <pubDate>Wed, 17 Feb 2021 18:19:25 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/tags/youtube-dl/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

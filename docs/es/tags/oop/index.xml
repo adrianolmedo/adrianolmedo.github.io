@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>oop on Adrián Olmedo</title>
+    <title>Oop on Adrián Olmedo</title>
     <link>https://adrianolmedo.github.io/es/tags/oop/</link>
-    <description>Recent content in oop on Adrián Olmedo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 15 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="https://adrianolmedo.github.io/es/tags/oop/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Oop on Adrián Olmedo</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Thu, 15 Jul 2021 16:56:47 +0600</lastBuildDate>
+    <atom:link href="https://adrianolmedo.github.io/es/tags/oop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Polución de interfaces</title>
       <link>https://adrianolmedo.github.io/es/blog/polucion-de-interfaces/</link>
       <pubDate>Thu, 15 Jul 2021 16:56:47 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/blog/polucion-de-interfaces/</guid>
-      <description>Below is a full Spanish translation of an William Kennedy&#39;s post in Ardan labs Blog: Avoid Interface Pollution.
-  Introducción Las interfaces solo deben utilizarse cuando su valor añadido sea claro.</description>
+      <description>&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Below is a full Spanish translation of an William Kennedy&#39;s post in Ardan labs Blog: &lt;a href=&#34;https://www.ardanlabs.com/blog/2016/10/avoid-interface-pollution.html&#34;&gt;Avoid Interface Pollution&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&#xA;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;introducción&#34;&gt;Introducción&lt;/h4&gt;&#xA;&lt;p&gt;Las interfaces solo deben utilizarse cuando su valor añadido sea claro. Veo demasiados paquetes que declaran interfaces innecesariamente, a veces solo por usar interfaces. El uso de interfaces cuando no son necesarias se denomina contaminación de interfaces. Esta es una práctica que me gustaría ver cuestionada e identificada más en las revisiones de código.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Menos es potencialmente más</title>
       <link>https://adrianolmedo.github.io/es/blog/menos-es-potencialmente-mas/</link>
       <pubDate>Thu, 15 Jul 2021 12:09:51 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/es/blog/menos-es-potencialmente-mas/</guid>
-      <description>Below is a full Spanish translation of Rob Pike&#39;s original post on his personal Blogger: Less is exponentially more.</description>
+      <description>&lt;div class=&#34;notices note&#34; &gt;&lt;p&gt;Below is a full Spanish translation of Rob Pike&#39;s original post on his personal Blogger: &lt;a href=&#34;https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html&#34;&gt;Less is exponentially more&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&#xA;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Aquí está el texto de la charla que di en la reunión de Go SF en junio de 2012.&lt;/p&gt;&#xA;&lt;p&gt;Esta es una charla personal. No hablo por nadie más en el equipo de Go aquí, aunque quiero reconocer desde el principio que el equipo es lo que hizo y sigue haciendo que Go suceda. También me gustaría agradecer a los organizadores de Go SF por darme la oportunidad de hablar con ustedes.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

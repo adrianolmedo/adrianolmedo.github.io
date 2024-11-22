@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Elements</title>
@@ -35,7 +35,7 @@
 
 
 
-<link rel="stylesheet" href="https://adrianolmedo.github.io/css/vendor.min.a79ee9d76f0d66f9398a4c01464d5a832e52442b3c286c40c33a572d70a0c88b2b471ad1556e3860a1a3f7316111c20f4c203fc82d0ff39660baa44470f28759.css" integrity="sha512-p57p128NZvk5ikwBRk1agy5SRCs8KGxAwzpXLXCgyIsrRxrRVW44YKGj9zFhEcIPTCA/yC0P85ZguqREcPKHWQ==" media="screen">
+<link rel="stylesheet" href="https://adrianolmedo.github.io/css/vendor.min.4e9a33ab8c3360513518d63c6b319911159169016b0dd482879628a54138f8982aab8345b2fcbde832b4f54260f465324fffcf49d97d0f0a7cd59cf1315bb8e4.css" integrity="sha512-Tpozq4wzYFE1GNY8azGZERWRaQFrDdSCh5YopUE4&#43;Jgqq4NFsvy96DK09UJg9GUyT//PSdl9Dwp81ZzxMVu45A==" media="screen">
 
 
 </head>
@@ -208,7 +208,7 @@
 <hr>
 <h5 id="link">Link</h5>
 <p><a href="https://www.google.com">I&rsquo;m an inline-style link</a></p>
-<p><a href="https://www.google.com" title="Google's Homepage">I&rsquo;m an inline-style link with title</a></p>
+<p><a href="https://www.google.com" title="Google&#39;s Homepage">I&rsquo;m an inline-style link with title</a></p>
 <p><a href="https://www.themefisher.com">I&rsquo;m a reference-style link</a></p>
 <p><a href="../blob/master/LICENSE">I&rsquo;m a relative reference to a repository file</a></p>
 <p><a href="https://gethugothemes.com">You can use numbers for reference-style link definitions</a></p>
@@ -341,64 +341,67 @@ alert(s);
 <h5 id="tables">Tables</h5>
 <p>Colons can be used to align columns.</p>
 <table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Tables</th>
+          <th style="text-align: center">Are</th>
+          <th style="text-align: right">Cool</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>col 3 is</td>
+          <td style="text-align: center">right-aligned</td>
+          <td style="text-align: right">$1600</td>
+      </tr>
+      <tr>
+          <td>col 2 is</td>
+          <td style="text-align: center">centered</td>
+          <td style="text-align: right">$12</td>
+      </tr>
+      <tr>
+          <td>zebra stripes</td>
+          <td style="text-align: center">are neat</td>
+          <td style="text-align: right">$1</td>
+      </tr>
+  </tbody>
 </table>
 <p>There must be at least 3 dashes separating each header cell.
 The outer pipes (|) are optional, and you don&rsquo;t need to make the
 raw Markdown line up prettily. You can also use inline Markdown.</p>
 <table>
-<thead>
-<tr>
-<th>Markdown</th>
-<th>Less</th>
-<th>Pretty</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>Still</em></td>
-<td><code>renders</code></td>
-<td><strong>nicely</strong></td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Markdown</th>
+          <th>Less</th>
+          <th>Pretty</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><em>Still</em></td>
+          <td><code>renders</code></td>
+          <td><strong>nicely</strong></td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+      </tr>
+  </tbody>
 </table>
 <hr>
 <h5 id="image">Image</h5>
-<p><img src="../../images/post/01.jpg" alt="image"></p>
+<p><img alt="image" src="../../images/post/01.jpg"></p>
 <hr>
 <h5 id="youtube-video">Youtube video</h5>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/C0DPdy98e4c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/C0DPdy98e4c?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 
 		</div>
@@ -539,7 +542,7 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
 
 
 
-<script data-turbolinks-suppress-warning src="/js/vendor.min.7691f56c1a8f6454203de7b89e9e08a7b1ee29fe0771ce833a299d6459cbd3a16db6ea28bdfed969f060ba261ba2a37efe9c439cddab8dc1a392d3beb6550606.js" integrity="sha512-dpH1bBqPZFQgPee4np4Ip7HuKf4Hcc6DOimdZFnL06Fttuoovf7ZafBguiYboqN&#43;/pxDnN2rjcGjktO&#43;tlUGBg=="></script>
+<script data-turbolinks-suppress-warning src="/js/vendor.min.338062afb559ab2495f57ed903c764c8f3f27dd38ae8eb2766e3e193c15456af46b074a622250a6177bef56f4acda32946c3479b034707d3217c158fddb4af5b.js" integrity="sha512-M4Bir7VZqySV9X7ZA8dkyPPyfdOK6OsnZuPhk8FUVq9GsHSmIiUKYXe&#43;9W9KzaMpRsNHmwNHB9MhfBWP3bSvWw=="></script>
 
 
 

@@ -187,5 +187,15 @@
     <loc>https://adrianolmedo.github.io/elements/</loc>
   </url><url>
     <loc>https://adrianolmedo.github.io/404/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://adrianolmedo.github.io/es/404.html"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://adrianolmedo.github.io/404/"
+                />
   </url>
 </urlset>

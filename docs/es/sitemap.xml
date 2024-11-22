@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://adrianolmedo.github.io/es/</loc>
-    <lastmod>2021-07-23T11:35:57+06:00</lastmod>
+    <lastmod>2021-08-20T16:56:47+06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://adrianolmedo.github.io/es/blog/</loc>
-    <lastmod>2021-07-23T11:35:57+06:00</lastmod>
+    <lastmod>2021-08-20T16:56:47+06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -26,6 +26,19 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://adrianolmedo.github.io/es/blog/"
+                />
+  </url><url>
+    <loc>https://adrianolmedo.github.io/es/blog/como-usar-goplantuml/</loc>
+    <lastmod>2021-07-23T11:35:57+06:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://adrianolmedo.github.io/blog/how-to-use-goplantuml/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://adrianolmedo.github.io/es/blog/como-usar-goplantuml/"
                 />
   </url><url>
     <loc>https://adrianolmedo.github.io/es/tags/poo/</loc>
@@ -55,19 +68,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://adrianolmedo.github.io/es/tags/uml/"
-                />
-  </url><url>
-    <loc>https://adrianolmedo.github.io/es/blog/como-usar-goplantuml/</loc>
-    <lastmod>2021-07-23T11:35:57+06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://adrianolmedo.github.io/blog/how-to-use-goplantuml/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://adrianolmedo.github.io/es/blog/como-usar-goplantuml/"
                 />
   </url><url>
     <loc>https://adrianolmedo.github.io/es/tags/advices/</loc>

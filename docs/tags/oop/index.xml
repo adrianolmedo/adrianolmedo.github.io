@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>oop on Adrian Olmedo</title>
+    <title>Oop on Adrian Olmedo</title>
     <link>https://adrianolmedo.github.io/tags/oop/</link>
-    <description>Recent content in oop on Adrian Olmedo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 23 Jul 2021 11:35:57 +0600</lastBuildDate><atom:link href="https://adrianolmedo.github.io/tags/oop/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Oop on Adrian Olmedo</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 23 Jul 2021 11:35:57 +0600</lastBuildDate>
+    <atom:link href="https://adrianolmedo.github.io/tags/oop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use GoPlantUML?</title>
       <link>https://adrianolmedo.github.io/blog/how-to-use-goplantuml/</link>
       <pubDate>Fri, 23 Jul 2021 11:35:57 +0600</pubDate>
-      
       <guid>https://adrianolmedo.github.io/blog/how-to-use-goplantuml/</guid>
-      <description>goplantuml generates code in PlantUML format that represents a diagram of the relationships between the Go receiver structs, they are analogous to classes in traditional OOP.</description>
+      <description>&lt;p&gt;&lt;code&gt;goplantuml&lt;/code&gt; generates code in PlantUML format that represents a diagram of the relationships between the Go receiver structs, they are analogous to classes in traditional OOP.&lt;/p&gt;&#xA;&lt;p&gt;A useful tool at the beginning of the design and planning a complex project in Go, if you want graphically observe which entities are stepping on interfaces, visually follow dependency injections or identify patterns.&lt;/p&gt;&#xA;&lt;h4 id=&#34;if-your-project-is-flat-without-packages&#34;&gt;If your project is flat without packages&lt;/h4&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ goplantuml -aggregate-private-members -show-compositions -show-implementations -show-aggregations . &amp;gt; diagram.puml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;if-your-project-has-packages&#34;&gt;If your project has packages&lt;/h4&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ goplantuml -aggregate-private-members -show-compositions -show-implementations -show-aggregations ./ &amp;gt; diagram.puml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>
